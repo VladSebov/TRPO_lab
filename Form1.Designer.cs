@@ -53,16 +53,16 @@
             this.разделениеЭкранаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вертикальноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.горизонтальноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.снятьРазделениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Справка = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.ОПрограмме = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripLengthLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.снятьРазделениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox2 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -264,22 +264,30 @@
             this.горизонтальноеToolStripMenuItem,
             this.снятьРазделениеToolStripMenuItem});
             this.разделениеЭкранаToolStripMenuItem.Name = "разделениеЭкранаToolStripMenuItem";
-            this.разделениеЭкранаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.разделениеЭкранаToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.разделениеЭкранаToolStripMenuItem.Text = "Разделение экрана";
             // 
             // вертикальноеToolStripMenuItem
             // 
             this.вертикальноеToolStripMenuItem.Name = "вертикальноеToolStripMenuItem";
-            this.вертикальноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вертикальноеToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.вертикальноеToolStripMenuItem.Text = "Вертикальное";
             this.вертикальноеToolStripMenuItem.Click += new System.EventHandler(this.вертикальноеToolStripMenuItem_Click);
             // 
             // горизонтальноеToolStripMenuItem
             // 
             this.горизонтальноеToolStripMenuItem.Name = "горизонтальноеToolStripMenuItem";
-            this.горизонтальноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.горизонтальноеToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.горизонтальноеToolStripMenuItem.Text = "Горизонтальное";
             this.горизонтальноеToolStripMenuItem.Click += new System.EventHandler(this.горизонтальноеToolStripMenuItem_Click);
+            // 
+            // снятьРазделениеToolStripMenuItem
+            // 
+            this.снятьРазделениеToolStripMenuItem.Name = "снятьРазделениеToolStripMenuItem";
+            this.снятьРазделениеToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.снятьРазделениеToolStripMenuItem.Text = "Снять разделение";
+            this.снятьРазделениеToolStripMenuItem.Visible = false;
+            this.снятьРазделениеToolStripMenuItem.Click += new System.EventHandler(this.снятьРазделениеToolStripMenuItem_Click);
             // 
             // Справка
             // 
@@ -325,20 +333,6 @@
             this.toolStripLengthLabel.Size = new System.Drawing.Size(76, 17);
             this.toolStripLengthLabel.Text = "Символов: 0";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(7, 5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(779, 395);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -360,27 +354,23 @@
             this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(780, 395);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(6, 5);
-            this.textBox2.Multiline = true;
+            this.textBox2.Location = new System.Drawing.Point(7, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(788, 171);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.Size = new System.Drawing.Size(780, 288);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // снятьРазделениеToolStripMenuItem
-            // 
-            this.снятьРазделениеToolStripMenuItem.Name = "снятьРазделениеToolStripMenuItem";
-            this.снятьРазделениеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.снятьРазделениеToolStripMenuItem.Text = "Снять разделение";
-            this.снятьРазделениеToolStripMenuItem.Visible = false;
-            this.снятьРазделениеToolStripMenuItem.Click += new System.EventHandler(this.снятьРазделениеToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -399,9 +389,7 @@
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -442,10 +430,10 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripLengthLabel;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ToolStripMenuItem снятьРазделениеToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox textBox1;
+        private System.Windows.Forms.RichTextBox textBox2;
     }
 }
 

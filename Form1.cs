@@ -50,10 +50,16 @@ namespace TechProg2
         {
             if (toolStripStatusLabel.Text == "Статус: Создан пустой файл" || toolStripStatusLabel.Text == "Статус: Файл открыт")
             {
-                editor.ToDefaultStyle(textBox1);
                 if (editor.splitMode == true) textBox2.Text = textBox1.Text;
             }
-            this.Text = $"*{editor.filename} - Текстовый Редактор";
+            if (editor.content == textBox1.Text)
+            {
+                this.Text = $"{editor.filename} - Текстовый Редактор";
+            }
+            else
+            {
+                this.Text = $"*{editor.filename} - Текстовый Редактор";
+            }
 
         }
 
@@ -113,11 +119,13 @@ namespace TechProg2
                 }
                 if(result != DialogResult.Cancel)
                 {
+                    editor.ToDefaultStyle(textBox1);
                     editor.Opening(textBox1, toolStripStatusLabel);
                 }
             }
             if (!editor.unsaved)
             {
+                editor.ToDefaultStyle(textBox1);
                 editor.Opening(textBox1, toolStripStatusLabel);
             }
             
