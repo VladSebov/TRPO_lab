@@ -24,5 +24,9 @@ if (operSign == '/')
 {
     result = num1 / num2;
 }
+if (operSign == '%')
+{
+    result = num1 % num2;
+}
 Console.WriteLine("The result is " + result);
 Console.ReadLine();
