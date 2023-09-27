@@ -1,5 +1,4 @@
-﻿
-System.Console.WriteLine("Console Calculator");
+﻿System.Console.WriteLine("Console Calculator");
 System.Console.WriteLine("Possible operations: '+','-','*','/'");
 System.Console.WriteLine("Enter the first number");
 double num1 = Convert.ToDouble(Console.ReadLine());
@@ -22,7 +21,8 @@ if (operSign == '*')
 }
 if (operSign == '/')
 {
-    result = num1 / num2;
+    if (num2 != 0) result = num1 / num2;
 }
-Console.WriteLine("The result is " + result);
+if (num2 == 0) Console.WriteLine("Division by zero error");
+else Console.WriteLine("The result is " + result);
 Console.ReadLine();
