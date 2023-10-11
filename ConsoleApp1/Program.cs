@@ -23,6 +23,10 @@ if (operSign == '/')
 {
     if (num2 != 0) result = num1 / num2;
 }
+if (operSign == '^')
+{
+    result = Math.Pow(num1,num2);
+}
 if (num2 == 0) Console.WriteLine("Division by zero error");
 else Console.WriteLine("The result is " + result);
 Console.ReadLine();
