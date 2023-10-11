@@ -1,4 +1,5 @@
-System.Console.WriteLine("Console Calculator");
+System.Console.WriteLine("Hello, User!");
+System.Console.WriteLine("This is Console Calculator");
 System.Console.WriteLine("Possible operations: '+','-','*','/'");
 System.Console.WriteLine("Enter the first number");
 double num1 = Convert.ToDouble(Console.ReadLine());
